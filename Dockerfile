@@ -2,6 +2,7 @@ FROM debian:buster
 
 RUN mkdir -p /mangos/src
 RUN mkdir -p /mangos/zero
+RUN mkdir -p /mangos/data
 RUN apt-get update
 RUN apt-get install -y git make cmake libssl-dev libbz2-dev build-essential default-libmysqlclient-dev mariadb-client
 RUN git clone git://github.com/sindastra/mangos-zero-server.git --recursive --depth 1 /mangos/src/server
